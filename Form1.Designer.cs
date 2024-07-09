@@ -1,11 +1,12 @@
-namespace LoginFormApp
+namespace AddressBookApp
 {
     partial class Form1
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.TextBox textBoxUsername;
-        private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxPhoneNumber;
+        private System.Windows.Forms.Button buttonSave;
 
         protected override void Dispose(bool disposing)
         {
@@ -18,46 +19,54 @@ namespace LoginFormApp
 
         private void InitializeComponent()
         {
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.buttonLogin = new System.Windows.Forms.Button();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBoxUsername
+            // textBoxName
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(95, 35);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(200, 20);
-            this.textBoxUsername.TabIndex = 0;
+            this.textBoxName.Location = new System.Drawing.Point(95, 35);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(200, 20);
+            this.textBoxName.TabIndex = 0;
             // 
-            // textBoxPassword
+            // textBoxEmail
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(95, 80);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(200, 20);
-            this.textBoxPassword.TabIndex = 1;
-            this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxEmail.Location = new System.Drawing.Point(95, 80);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(200, 20);
+            this.textBoxEmail.TabIndex = 1;
             // 
-            // buttonLogin
+            // textBoxPhoneNumber
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(95, 125);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogin.TabIndex = 2;
-            this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(95, 125);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(200, 20);
+            this.textBoxPhoneNumber.TabIndex = 2;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(95, 170);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 3;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 211);
-            this.Controls.Add(this.buttonLogin);
-            this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.textBoxPhoneNumber);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxName);
             this.Name = "Form1";
-            this.Text = "Login Form";
+            this.Text = "Address Book";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace LoginFormApp
+namespace AddressBookApp
 {
     public partial class Form1 : Form
     {
@@ -10,12 +10,14 @@ namespace LoginFormApp
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
-            string username = textBoxUsername.Text;
-            string password = textBoxPassword.Text;
+            string name = textBoxName.Text;
+            string email = textBoxEmail.Text;
+            string phoneNumber = textBoxPhoneNumber.Text;
 
-            MessageBox.Show($"Username: {username}\nPassword: {password}", "Login Details");
+            // For simplicity, just displaying the entered information in a message box
+            MessageBox.Show($"Name: {name}\nEmail: {email}\nPhone Number: {phoneNumber}", "Saved Information");
         }
     }
 }
