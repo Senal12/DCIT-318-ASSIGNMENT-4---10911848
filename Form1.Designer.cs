@@ -1,12 +1,9 @@
-namespace AddressBookApp
+namespace DrawingApp
 {
     partial class Form1
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxPhoneNumber;
-        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Panel drawingPanel;
 
         protected override void Dispose(bool disposing)
         {
@@ -19,56 +16,30 @@ namespace AddressBookApp
 
         private void InitializeComponent()
         {
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.drawingPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // textBoxName
+            // drawingPanel
             // 
-            this.textBoxName.Location = new System.Drawing.Point(95, 35);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(200, 20);
-            this.textBoxName.TabIndex = 0;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(95, 80);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(200, 20);
-            this.textBoxEmail.TabIndex = 1;
-            // 
-            // textBoxPhoneNumber
-            // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(95, 125);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(200, 20);
-            this.textBoxPhoneNumber.TabIndex = 2;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Location = new System.Drawing.Point(95, 170);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 3;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.drawingPanel.BackColor = System.Drawing.Color.White;
+            this.drawingPanel.Location = new System.Drawing.Point(12, 12);
+            this.drawingPanel.Name = "drawingPanel";
+            this.drawingPanel.Size = new System.Drawing.Size(760, 537);
+            this.drawingPanel.TabIndex = 0;
+            this.drawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingPanel_MouseDown);
+            this.drawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawingPanel_MouseMove);
+            this.drawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingPanel_MouseUp);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 211);
-            this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.textBoxPhoneNumber);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxName);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.drawingPanel);
             this.Name = "Form1";
-            this.Text = "Address Book";
+            this.Text = "Drawing App";
             this.ResumeLayout(false);
-            this.PerformLayout();
+
         }
     }
 }
